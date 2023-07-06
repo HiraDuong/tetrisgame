@@ -5,6 +5,28 @@ square_size = 30
 canvas_width = 10 * square_size
 canvas_height = 20* square_size
 
+global Mat_game
+global Mat_menu
+Mat_game = [[0]*10 for _ in range(20)]
+Mat_menu = [[0]*10 for _ in range(20)]
+#display next block area
+for x in range(2, 8):
+    for y in range(2, 8):
+        Mat_menu[x][y] = 1
+# btn areas 
+for x in range(1, 3):
+    for y in range(12, 14):
+        Mat_menu[y][x] = 2
+for x in range(4, 6):
+    for y in range(12, 14):
+        Mat_menu[y][x] = 2
+for x in range(7, 9):
+    for y in range(12, 14):
+        Mat_menu[y][x] = 2
+for x in range(4, 6):
+    for y in range(15, 17):
+        Mat_menu[y][x] = 2
+
 blocks = {
 # I block
 'I' :[[0,0,0,0],
@@ -30,4 +52,9 @@ blocks = {
 }
 
 
-block_keys = blocks.keys()
+block_keyss = blocks.keys()
+block_keys = list(block_keyss)
+print(block_keys)
+print(type(block_keys))
+print(block_keys[1])
+

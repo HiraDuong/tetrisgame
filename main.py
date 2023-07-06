@@ -1,7 +1,10 @@
 from screen import Screen
 
-class main:
+class Main:
     def __init__(self) :
         self.screen =Screen()
 
-    import random as rd
+    def run_game(self):
+        self.screen.run()
+main = Main()
+main.run_game()

@@ -20,9 +20,9 @@ class Draw:
                     canvas.create_rectangle(x, y, x + square_size, y + square_size, fill="white")
                 else:
                     index = Mat_game[i][j]
-                    #key_block = block_keys[index-1]
-                    #color = colors[key_block]
-                    canvas.create_rectangle(x, y, x + square_size, y + square_size, fill="red")
+                    key_block = block_keys[index-1]
+                    color = colors[key_block]
+                    canvas.create_rectangle(x, y, x + square_size, y + square_size, fill=color)
        
 
     def draw_menu(self,screen,Mat_menu,key_block):
@@ -36,6 +36,8 @@ class Draw:
                 y = i * square_size
                 if Mat_menu[i][j] == 1:
                     canvas.create_rectangle(x, y, x + square_size, y + square_size, fill="white")
+                elif Mat_menu[i][j] == 2:
+                    canvas.create_rectangle(x, y, x + square_size, y + square_size, fill="lightblue")
                 else:
                     canvas.create_rectangle(x, y, x + square_size, y + square_size, fill="green")
         block = blocks[key_block]
@@ -48,11 +50,13 @@ class Draw:
                 elif block == blocks['I']:
                     x = (j+3)* square_size
                     y = (i+3.5) *square_size
-                else:
+                else: 
                     x = (j+4)* square_size
                     y = (i+4) *square_size
                 if (block[i][j] !=0):
                     canvas.create_rectangle(x, y, x + square_size, y + square_size, fill=color)
+       #draw button
+
       
 
  
